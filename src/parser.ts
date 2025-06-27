@@ -34,7 +34,7 @@ export class Parser {
     const options = {
       silent: true
     }
-    core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
+    core.debug(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
 
     await exec.exec('xcrun', args, options)
     return Buffer.from(await readFile(outputPath))
@@ -53,7 +53,7 @@ export class Parser {
       }
     }
 
-    core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
+    core.debug(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
     await exec.exec('xcrun', args, options)
     return output
   }
@@ -83,7 +83,7 @@ export class Parser {
       }
     }
 
-    core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
+    core.debug(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
     await exec.exec('xcrun', args, options)
     return output
   }

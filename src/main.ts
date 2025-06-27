@@ -157,7 +157,7 @@ async function run(): Promise<void> {
         for (const uploadBundlePath of inputPaths) {
           try {
             await stat(uploadBundlePath)
-          } catch (error) {
+          } catch (ignored) {
             continue
           }
 
@@ -166,10 +166,8 @@ async function run(): Promise<void> {
 
           const rootDirectory = uploadBundlePath
 
-          glob(`${uploadBundlePath}/**/*`, async (error, files) => {
-            if (error) {
-              core.error(error)
-            }
+          try {
+            const files = await glob(`${uploadBundlePath}/**/*`)
             if (files.length) {
               await artifactClient.uploadArtifact(
                 artifactName,
@@ -177,7 +175,9 @@ async function run(): Promise<void> {
                 rootDirectory
               )
             }
-          })
+          } catch (error) {
+            core.error(error as Error)
+          }
         }
       }
     }

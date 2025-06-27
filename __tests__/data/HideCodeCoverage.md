@@ -123,8 +123,6 @@
     - Wait for com.kishikawakatsumi.xcresulttool-example to idle
 - Find the Target Application 'com.kishikawakatsumi.xcresulttool-example'
 - Added attachment named 'Launch Screen'
-  <details ><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="390px" src="undefined"></div></details>
-
 - Tear Down
 <tr><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/passed.png" alt="Success" title="Success" width="14px" align="top"> <img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testLaunch()</code><br><br><b>Configuration:</b><br><code>XCUIAppearanceMode: 1, XCUIDeviceOrientation: 4</code><br><br><b>Activities:</b>
 
@@ -142,8 +140,6 @@
     - Wait for com.kishikawakatsumi.xcresulttool-example to idle
 - Find the Target Application 'com.kishikawakatsumi.xcresulttool-example'
 - Added attachment named 'Launch Screen'
-  <details ><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="390px" src="undefined"></div></details>
-
 - Tear Down
 <tr><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/passed.png" alt="Success" title="Success" width="14px" align="top"> <img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testLaunch()</code><br><br><b>Configuration:</b><br><code>XCUIAppearanceMode: 2, XCUIDeviceOrientation: 1</code><br><br><b>Activities:</b>
 
@@ -161,8 +157,6 @@
     - Wait for com.kishikawakatsumi.xcresulttool-example to idle
 - Find the Target Application 'com.kishikawakatsumi.xcresulttool-example'
 - Added attachment named 'Launch Screen'
-  <details ><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="390px" src="undefined"></div></details>
-
 - Tear Down
 <tr><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/passed.png" alt="Success" title="Success" width="14px" align="top"> <img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testLaunch()</code><br><br><b>Configuration:</b><br><code>XCUIAppearanceMode: 2, XCUIDeviceOrientation: 4</code><br><br><b>Activities:</b>
 
@@ -180,7 +174,5 @@
     - Wait for com.kishikawakatsumi.xcresulttool-example to idle
 - Find the Target Application 'com.kishikawakatsumi.xcresulttool-example'
 - Added attachment named 'Launch Screen'
-  <details ><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="390px" src="undefined"></div></details>
-
 - Tear Down
 </table>

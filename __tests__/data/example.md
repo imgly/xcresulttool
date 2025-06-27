@@ -91,8 +91,6 @@
 <tr><td align="center" valign="top" width="52px"><img src="https://xcresulttool-static.netlify.app/i/expected-failure.png" alt="Expected Failure" title="Expected Failure" width="14px" align="top"><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testExpedtedFailures()</code><br><br><b>Activities:</b>
 
 - Start Test at 2021-10-17 22:17:33.598
-  <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="812px" src="undefined"></div></details>
-
 - Set Up
 - Tear Down
 <tr><td align="center" valign="top" width="52px"><img src="https://xcresulttool-static.netlify.app/i/passed.png" alt="Success" title="Success" width="14px" align="top"><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testFail()</code><br><br><b>Activities:</b>
@@ -139,8 +137,6 @@
     - Wait for com.kishikawakatsumi.Weather to idle
 - Find the Target Application 'com.kishikawakatsumi.Weather'
 - Added attachment named 'Launch Screen'
-  <details ><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Tear Down
 <tr><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/passed.png" alt="Success" title="Success" width="14px" align="top"> <img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testLaunch()</code><br><br><b>Configuration:</b><br><code>XCUIAppearanceMode: 1, XCUIDeviceOrientation: 4</code><br><br><b>Activities:</b>
 
@@ -158,45 +154,23 @@
     - Wait for com.kishikawakatsumi.Weather to idle
 - Find the Target Application 'com.kishikawakatsumi.Weather'
 - Added attachment named 'Launch Screen'
-  <details ><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Tear Down
 <tr><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/failure.png" alt="Failure" title="Failure" width="14px" align="top"> <a name="weatheruitests_weatheruitestslaunchtests/testlaunch()"/><img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testLaunch()</code><a href="#user-content-weatheruitests_weatheruitestslaunchtests/testlaunch()_failure-summary"><img src="https://xcresulttool-static.netlify.app/i/back.png" alt="back" width="14px" align="top"></a><br><br><b>Configuration:</b><br><code>XCUIAppearanceMode: 2, XCUIDeviceOrientation: 1</code><br><br><b>Activities:</b>
 
 - Setting device orientation to Portrait
-  <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="812px" src="undefined"></div></details>
-
   - Wait for com.kishikawakatsumi.Weather to idle
-    <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="812px" src="undefined"></div></details>
-
 - Setting appearance mode to Dark
-  <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
   - Wait for com.kishikawakatsumi.Weather to idle
-    <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Start Test at 2021-10-17 22:17:51.210
-  <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Set Up
 - Open com.kishikawakatsumi.Weather
-  <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
   - Launch com.kishikawakatsumi.Weather
     - Terminate com.kishikawakatsumi.Weather:33100
-      <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
     - Setting up automation session
     - Wait for com.kishikawakatsumi.Weather to idle
-      <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Find the Target Application 'com.kishikawakatsumi.Weather'
 - Added attachment named 'Launch Screen'
-  <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Assertion Failure at WeatherUITestsLaunchTests.swift:28: failed - Fail!!
-  <details open><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Tear Down
 <tr><td valign="top" width="716px"><img src="https://xcresulttool-static.netlify.app/i/passed.png" alt="Success" title="Success" width="14px" align="top"> <img src="https://xcresulttool-static.netlify.app/i/test-method.png" alt="test-method" width="14px" align="top">&nbsp;<code>testLaunch()</code><br><br><b>Configuration:</b><br><code>XCUIAppearanceMode: 2, XCUIDeviceOrientation: 4</code><br><br><b>Activities:</b>
 
@@ -214,7 +188,5 @@
     - Wait for com.kishikawakatsumi.Weather to idle
 - Find the Target Application 'com.kishikawakatsumi.Weather'
 - Added attachment named 'Launch Screen'
-  <details ><summary><img src="https://xcresulttool-static.netlify.app/i/attachment.png" alt="attachment" width="14px" align="top"></summary><div><img width="375px" src="undefined"></div></details>
-
 - Tear Down
 </table>
