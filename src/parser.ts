@@ -17,11 +17,7 @@ export class Parser {
     return parseObject(root) as any
   }
 
-  async exportObject(
-    reference: string,
-    outputPath: string,
-    legacy?: boolean
-  ): Promise<Buffer> {
+  async exportObject(reference: string, outputPath: string): Promise<Buffer> {
     const args = [
       'xcresulttool',
       'export',
@@ -32,26 +28,16 @@ export class Parser {
       '--output-path',
       outputPath,
       '--id',
-      reference
+      reference,
+      '--legacy'
     ]
-    if (legacy) {
-      args.push('--legacy')
-    }
     const options = {
       silent: true
     }
     core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
 
-    try {
-      await exec.exec('xcrun', args, options)
-      return Buffer.from(await readFile(outputPath))
-    } catch (error) {
-      if (legacy) {
-        throw error
-      } else {
-        return await this.exportObject(reference, outputPath, legacy)
-      }
-    }
+    await exec.exec('xcrun', args, options)
+    return Buffer.from(await readFile(outputPath))
   }
 
   async exportCodeCoverage(): Promise<string> {
@@ -72,18 +58,16 @@ export class Parser {
     return output
   }
 
-  private async toJSON(reference?: string, legacy?: boolean): Promise<string> {
+  private async toJSON(reference?: string): Promise<string> {
     const args = [
       'xcresulttool',
       'get',
       '--path',
       this.bundlePath,
       '--format',
-      'json'
+      'json',
+      '--legacy'
     ]
-    if (legacy) {
-      args.push('--legacy')
-    }
     if (reference) {
       args.push('--id')
       args.push(reference)
@@ -100,16 +84,8 @@ export class Parser {
     }
 
     core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`)
-    try {
-      await exec.exec('xcrun', args, options)
-      return output
-    } catch (error) {
-      if (legacy) {
-        throw error
-      } else {
-        return await this.toJSON(reference, true)
-      }
-    }
+    await exec.exec('xcrun', args, options)
+    return output
   }
 }
 

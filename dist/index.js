@@ -1479,7 +1479,7 @@ class Parser {
             return parseObject(root);
         });
     }
-    exportObject(reference, outputPath, legacy) {
+    exportObject(reference, outputPath) {
         return __awaiter(this, void 0, void 0, function* () {
             const args = [
                 'xcresulttool',
@@ -1491,27 +1491,15 @@ class Parser {
                 '--output-path',
                 outputPath,
                 '--id',
-                reference
+                reference,
+                '--legacy'
             ];
-            if (legacy) {
-                args.push('--legacy');
-            }
             const options = {
                 silent: true
             };
             core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
-            try {
-                yield exec.exec('xcrun', args, options);
-                return Buffer.from(yield readFile(outputPath));
-            }
-            catch (error) {
-                if (legacy) {
-                    throw error;
-                }
-                else {
-                    return yield this.exportObject(reference, outputPath, legacy);
-                }
-            }
+            yield exec.exec('xcrun', args, options);
+            return Buffer.from(yield readFile(outputPath));
         });
     }
     exportCodeCoverage() {
@@ -1531,7 +1519,7 @@ class Parser {
             return output;
         });
     }
-    toJSON(reference, legacy) {
+    toJSON(reference) {
         return __awaiter(this, void 0, void 0, function* () {
             const args = [
                 'xcresulttool',
@@ -1539,11 +1527,9 @@ class Parser {
                 '--path',
                 this.bundlePath,
                 '--format',
-                'json'
+                'json',
+                '--legacy'
             ];
-            if (legacy) {
-                args.push('--legacy');
-            }
             if (reference) {
                 args.push('--id');
                 args.push(reference);
@@ -1558,18 +1544,8 @@ class Parser {
                 }
             };
             core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
-            try {
-                yield exec.exec('xcrun', args, options);
-                return output;
-            }
-            catch (error) {
-                if (legacy) {
-                    throw error;
-                }
-                else {
-                    return yield this.toJSON(reference, true);
-                }
-            }
+            yield exec.exec('xcrun', args, options);
+            return output;
         });
     }
 }
