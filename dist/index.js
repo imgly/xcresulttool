@@ -1247,7 +1247,7 @@ async function run() {
                     try {
                         await stat(uploadBundlePath);
                     }
-                    catch (error) {
+                    catch (ignored) {
                         continue;
                     }
                     const artifactClient = new artifact.DefaultArtifactClient();
@@ -1256,7 +1256,9 @@ async function run() {
                     try {
                         const files = await (0, glob_1.glob)(`${uploadBundlePath}/**/*`);
                         if (files.length) {
-                            await artifactClient.uploadArtifact(artifactName, files, rootDirectory);
+                            await artifactClient.uploadArtifact(artifactName, files, rootDirectory, {
+                                retentionDays: 7
+                            });
                         }
                     }
                     catch (error) {
@@ -1412,7 +1414,7 @@ class Parser {
         const options = {
             silent: true
         };
-        core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
+        core.debug(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
         await exec.exec('xcrun', args, options);
         return Buffer.from(await readFile(outputPath));
     }
@@ -1427,7 +1429,7 @@ class Parser {
                 }
             }
         };
-        core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
+        core.debug(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
         await exec.exec('xcrun', args, options);
         return output;
     }
@@ -1454,7 +1456,7 @@ class Parser {
                 }
             }
         };
-        core.info(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
+        core.debug(`about to execute: "${JSON.stringify(['xcrun', args])}"`);
         await exec.exec('xcrun', args, options);
         return output;
     }

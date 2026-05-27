@@ -172,7 +172,10 @@ async function run(): Promise<void> {
               await artifactClient.uploadArtifact(
                 artifactName,
                 files,
-                rootDirectory
+                rootDirectory,
+                {
+                  retentionDays: 7
+                }
               )
             }
           } catch (error) {
